@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content ="width=device-width,initial-scale=1.0">
-<title>Styled Page Example</title>
-<link rel="stylesheet" href="style.css">
+  <title>Welcome to My Homepage</title>
+  <link id="pagestyle" rel="stylesheet" href="style1.css">
+  <style>
+    /* Basic styles for buttons outside of stylesheet */
+    .menu button {
+      padding: 8px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 3px;
+      background-color: #f0f0f0;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+    .menu button.active {
+      background-color: #00a050;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-<div id="container">
-<he>Welcometo My Styled Page</h2>
-<hr>
-<h3>About This Page</h3>
-<p>
-This is a sample paragraph that demonstrates how the first line is styled differently.</p>
-<p class ="highlight">This paragraph is highlighted with a background color and a dashed border.</p>
-<p>This is another paragraph to show the effect of the general sibling selector.It gets a differentfont style</p>
-<span>This span element is styled with the child selector.</span>
-<p>The following image and time elements are grouped and have block display.</p>
-<img src="https://yumove.co.uk/cdn/shop/articles/Dog_ageing_puppy_da5d1eeb-9265-4925-adc2-24396ff6e7aa.jpg?v=1739461142" alt="Sample Image" width="200">
-<time datetime="2025-09-11">September 11,2025</time>
-<p> Visit <a href="https://www.example.com" target="_blank"> this link </a> to see how the attribute selector works with hover effects.</p>
-</div>
+  <div class="header">Welcome to My Homepage</div>
+  <div class="subheader">Use the menu to select different Stylesheets</div>
+
+  <div class="container">
+    <div class="menu">
+      <button class="active" data-style="style1.css">Stylesheet 1</button>
+      <button data-style="style2.css">Stylesheet 2</button>
+      <button data-style="style3.css">Stylesheet 3</button>
+      <button data-style="style4.css">Stylesheet 4</button>
+      <button data-style="nostyle.css">No Stylesheet</button>
+    </div>
+
+    <div class="content">
+      <h1>Same Page Different Stylesheets</h1>
+      <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
+      <a href="#">Stylesheet1</a>, <a href="#">Stylesheet2</a>, <a href="#">Stylesheet3</a>, <a href="#">Stylesheet4</a>.</p>
+
+      <h2>No Styles</h2>
+      <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no styles.</p>
+    </div>
+
+    <div class="sidebar">
+      <b>Side-Bar</b>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.menu button');
+    const stylesheetLink = document.getElementById('pagestyle');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        // Change stylesheet
+        const styleFile = button.getAttribute('data-style');
+        stylesheetLink.setAttribute('href', styleFile);
+      });
+    });
+  </script>
 </body>
 </html>
