@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Registration Form</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        table{
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        td{
+            padding: 30px;
+            font-size: 18px;
+            color: #555;
+        }
+        th{
+            text-align: left;
+            padding: 15px;
+            background-color: #4cc2c2;
+            color:white;
+            font-size: 20px;
+        }
+        input[type="text"],input[type="email"],input[type="tel"],select,textarea{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"],input[type="reset"]{
+            background-color: #4cc2c2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover,input[type="reset"]:hover{
+            background-color: #4cc2c2;
+        }
+        textarea{
+            resize:vertical;
+            height:100px;
+        }
+        .radio, .checkbox{
+            width:auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>College Event Registration Form</h1>
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <th colspan="2">Personal Information</th>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" name="name" placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+          <td>USN:</td>
+          <td><input type="text" name="usn" placeholder="Enter your USN"></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="email" placeholder="Enter your email"></td>
+        </tr>
+        <tr>
+          <td>Phone number:</td>
+          <td><input type="tel" name="phonenumber" placeholder="Enter your Phone number"></td>
+        </tr>
+        <tr>
+          <td>Semester:</td>
+
+          <td>
+             <input type="radio" name="semester" value="1" class="radio"> 1
+             <input type="radio" name="semester" value="1" class="radio"> 2
+             <input type="radio" name="semester" value="1" class="radio"> 3
+             <input type="radio" name="semester" value="1" class="radio"> 4
+             <input type="radio" name="semester" value="1" class="radio"> 5
+             <input type="radio" name="semester" value="1" class="radio"> 6
+<input type="radio" name="semester" value="1" class="radio"> 7
+<input type="radio" name="semester" value="1" class="radio"> 8
+          </td>
+         </tr>
+         
+         <tr>
+           <td>Events:</td>
+           <td>
+             <input type="checkbox" name="events" value="Hackathon" class="checkbox"> Hackathon
+             <input type="checkbox" name="hobbies" value="Drawing" class="checkbox"> Drawing
+             <input type="checkbox" name="hobbies" value="Dance" class="checkbox"> Dance
+<input type="checkbox" name="hobbies" value="Singing" class="checkbox"> Singing
+<input type="checkbox" name="hobbies" value="Mehendi" class="checkbox"> Mehendi
+           </td>
+         </tr>
+        <tr>
+            <td>Team Members:</td>
+            <td><textarea name="address" placeholder="Enter the team members Name and USN"></textarea></td>
+         </tr>
+
+         <tr>
+            <td colspan="2" style="text-align: center;">
+              <input type="submit" value="Register">
+              <input type="reset" value="Reset">
+            </td>
+         </tr>
+       </table>
+    </form>
+</body>
+</html>
